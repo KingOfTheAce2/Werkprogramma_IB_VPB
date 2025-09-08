@@ -1,4 +1,4 @@
-# AangifteVault
+# Aangifte Werkprogramma IB&VPB
 
 Vastleggingsprogramma voor fiscale aangiftes inkomstenbelasting en vennootschapsbelasting met drie delen:
 1. **Klant** klantdossier, UBO, paspoort, KYC, opdrachtbevestiging
