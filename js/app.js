@@ -44,8 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Data ---
   const clients = {
-    ib: ['Jan Jansen', 'Pim Jansen', 'Anne de Jong'],
-    vpb: ['Test B.V.', 'Test 2 B.V.', 'Holding X B.V.'],
+    ib: ['J. van der Berg', 'M.A. Jansen', 'S.P. de Vries', 'K. Molenwijk', 'P.J. van Dijk'],
+    vpb: ['Bakkerij Jansen B.V.', 'IT Solutions Nederland B.V.', 'Holding De Vries B.V.', 'Transport Molenwijk B.V.', 'Consultancy van Dijk B.V.'],
   };
   const permissions = {
     opsteller: {
@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
       canClose: false,
       canReopen: false,
       canAddYear: false,
+      displayName: 'Belastingadviseur'
     },
     reviewer: {
       canSubmit: true,
@@ -61,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
       canClose: true,
       canReopen: true,
       canAddYear: true,
+      displayName: 'Senior Adviseur'
     },
     admin: {
       canSubmit: true,
@@ -68,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
       canClose: true,
       canReopen: true,
       canAddYear: true,
+      displayName: 'Kantoormanager'
     },
   };
 
