@@ -134,36 +134,23 @@
             <div class="flex items-center gap-4">
               <div class="text-sm">
                 <p class="font-semibold" id="user-display-werkprogramma"></p>
-                <input
-                  type="text"
-                  id="api-key-input"
-                  placeholder="X-API-KEY (AuditCase)"
-                  class="mt-1 text-xs p-1 border rounded-md w-48"
-                  aria-label="AuditCase API sleutel"
-                />
-              </div>
-              <div class="flex items-center gap-2">
-                <input
-                  type="file"
-                  id="import-file"
-                  class="hidden"
-                  accept=".csv"
-                  aria-label="Importeer dossier"
-                />
-                <label
-                  for="import-file"
-                  class="cursor-pointer bg-gray-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-gray-600 transition"
-                  >Importeren (CSV)</label
-                >
-                <button
-                  id="btn-export"
-                  class="bg-gray-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-gray-600 transition"
-                  aria-label="Exporteer dossier"
-                >
-                  Exporteren (CSV)
-                </button>
+                <p class="text-xs text-gray-500 mt-1">AuditCase integratie actief</p>
               </div>
               <div id="action-buttons" class="flex items-center gap-2">
+                <button
+                  id="btn-document-manager"
+                  class="bg-purple-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-purple-700 transition"
+                  aria-label="Document Beheer"
+                >
+                  📁 Documenten
+                </button>
+                <button
+                  id="btn-year-rollover"
+                  class="hidden bg-orange-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-orange-700 transition"
+                  aria-label="Jaar Rollover"
+                >
+                  📅 Jaar Rollover
+                </button>
                 <button
                   id="btn-submit"
                   class="hidden bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition"
@@ -196,10 +183,25 @@
             </div>
           </div>
         </header>
-        <main
-          id="werkprogramma-container"
-          class="bg-white p-6 rounded-lg shadow-md min-h-[200px]"
-        ></main>
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+          <!-- Question Tree Navigation -->
+          <div class="lg:col-span-1">
+            <div class="bg-white p-4 rounded-lg shadow-md">
+              <h3 class="text-lg font-semibold text-gray-800 mb-4">Voortgang Werkprogramma</h3>
+              <div id="question-tree" class="space-y-2">
+                <!-- Tree will be populated by JavaScript -->
+              </div>
+            </div>
+          </div>
+          
+          <!-- Main Content -->
+          <div class="lg:col-span-3">
+            <main
+              id="werkprogramma-container"
+              class="bg-white p-6 rounded-lg shadow-md min-h-[200px]"
+            ></main>
+          </div>
+        </div>
       </div>
     </div>
 
